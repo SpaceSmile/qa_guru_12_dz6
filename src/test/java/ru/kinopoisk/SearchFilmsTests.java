@@ -51,7 +51,7 @@ public class SearchFilmsTests {
         );
     }
 
-    @MethodSource()
+    @MethodSource("methodSourceKinoSearchComplexTest")
     @ParameterizedTest
     void methodSourceKinoSearchComplexTest(String testData, String result) {
         Selenide.open("https://www.kinopoisk.ru");
