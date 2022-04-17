@@ -22,7 +22,7 @@ public class SearchFilmsTests {
             "Spider-Man"
     })
 
-    @ParameterizedTest(name = "Проверка поиска фильмов на сатйе kinopoisk по слову {0}")
+    @ParameterizedTest(name = "Проверка поиска фильмов на сайте kinopoisk по слову {0}")
     void kinoSearchTest(String testData) {
         Selenide.open("https://www.kinopoisk.ru");
         $("[name=kp_query]").setValue(testData);
@@ -35,7 +35,7 @@ public class SearchFilmsTests {
             "The Batman, Бэтмен 2022",
             "Spider-Man, Человек-паук: Нет пути домой 2021"
     })
-    @ParameterizedTest(name = "Проверка поиска фильмов на сатйе kinopoisk по слову {0}, ожидаем результат: {1}")
+    @ParameterizedTest(name = "Проверка поиска фильмов на сайте kinopoisk по слову {0}, ожидаем результат: {1}")
     void kinoSearchComplexTest(String testData) {
         Selenide.open("https://www.kinopoisk.ru");
         $("[name=kp_query]").setValue(testData);
